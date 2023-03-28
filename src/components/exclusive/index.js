@@ -13,9 +13,19 @@ function Exclusive() {
           Search for the latest articles and find amazing products to buy from
           our huge collection
         </p>
-        <br />
-        <input type="text"/>
-        <button type="button">Explore now</button>
+      </div>
+      <div className="w-[100%] mt-6 mb-20 flex justify-center">
+        <input
+          type="text"
+          placeholder="Search Products By Category"
+          className="w-[30%] h-[2rem] bg-gray-200 text-center rounded-[5px] mr-6 py-6"
+        />
+        <button
+          type="button"
+          className="mr-[1rem] text-white capitalize font-medium rounded-[5px] bg-black py-2 px-10"
+        >
+          Explore now
+        </button>
       </div>
     </section>
   )
