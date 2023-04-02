@@ -5,12 +5,14 @@ import Navbar from "../../components/navbar"
 
 function Home() {
   return (
-    <section className="px-20">
-      <Navbar />
-      <Main />
-      <Exclusive />
-      <Footer/>
-    </section>
+      <article>
+        <section className="px-20">
+          <Navbar />
+          <Main />
+          <Exclusive />
+        </section>
+        <Footer />
+      </article>
   )
 }
 
