@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <nav className="flex">
       <ul className="w-[100%] flex text-lg font-medium my-8 space-x-20 ">
-        <h1 className="text-[2rem] specialText font-bold">Chubbi.</h1>
+        <h1 className="text-[2rem] specialText font-bold">Juddie.</h1>
         <li>
           <Link
             to="/"

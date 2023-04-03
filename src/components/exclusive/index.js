@@ -18,11 +18,11 @@ function Exclusive() {
         <input
           type="text"
           placeholder="Search Products By Category"
-          className="w-[30%] h-[2rem] bg-gray-200 text-center rounded-[5px] mr-6 py-6"
+          className="w-[30%] h-[2rem] bg-gray-200 text-center rounded-l-[5px] py-6"
         />
         <button
           type="button"
-          className="mr-[1rem] text-white capitalize font-medium rounded-[5px] bg-black py-2 px-10"
+          className="mr-[1rem] text-white capitalize font-medium rounded-r-[5px] bg-black py-2 px-10"
         >
           Explore now
         </button>
