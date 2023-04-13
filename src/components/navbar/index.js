@@ -48,7 +48,7 @@ function Navbar() {
           <Link>Cart</Link>
         </li>
         <li>
-          <Link>Login</Link>
+          <Link to='/login'> Login</Link>
         </li>
       </ul>
     </nav>

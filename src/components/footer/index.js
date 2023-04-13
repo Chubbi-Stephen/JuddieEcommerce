@@ -16,13 +16,13 @@ function Footer() {
             </p>
           </div>
           <div className="w-[30%] mt-4 mb-6 flex justify-between">
-            <span>
+            <span className="foot">
               <FaFacebook size={30} />
             </span>
-            <span>
+            <span className="foot"> 
               <FaTwitter size={30} />
             </span>
-            <span>
+            <span className="foot">
               <FaInstagram size={30} />
             </span>
           </div>
@@ -57,7 +57,7 @@ function Footer() {
       <section className="w-[100%] p-5 pb-0 flex justify-center">
         <p>
           Copyright © 2023 Chubbi by{" "}
-          <Link to="https://devchubbiportfolio.netlify.app/">devChubbi</Link>❤️.
+          <Link className="foot" to="https://devchubbiportfolio.netlify.app/">devChubbi</Link>❤️.
         </p>
       </section>
     </footer>
