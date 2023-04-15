@@ -28,7 +28,7 @@ class Products extends React.Component {
     if (!DataisLoaded)
       return (
         <div>
-          <h1> Pleses wait some time.... </h1>{" "}
+          <h1> Please wait some time.... </h1>{" "}
         </div>
       )
 
@@ -42,13 +42,13 @@ class Products extends React.Component {
                 alt="img_Illustration"
                 className="w-[100%] h-[200px] object-cover rounded hover:scale-105 transition-all"
               />
-              <span className="flex">
-                <h3 className="w-full capitalize">{item.title}</h3>
-                <div className="w-[35%]  text-center rounded-full bg">
+              <span className="flex pt-6">
+                <h3 className="w-full capitalize font-bold">{item.title}</h3>
+                <div className="w-[35%] font-bold text-center rounded-full bg">
                   <p>${item.price}</p>
                 </div>
               </span>
-              <h5>{item.category}</h5>
+              <h5 className="pt-4 font-medium pb-4">Category: {item.category}</h5>
               <p>
                 {item.description.split(" ").slice(0, 10).join(" ") + "..."}
               </p>
