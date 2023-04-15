@@ -48,7 +48,9 @@ class Products extends React.Component {
                   <p>${item.price}</p>
                 </div>
               </span>
-              <h5 className="pt-4 font-medium pb-3 capitalize">Category: {item.category}</h5>
+              <h5 className="pt-4 font-medium pb-3 capitalize">
+                Category: {item.category}
+              </h5>
               <p className="text-[13px]">
                 {item.description.split(" ").slice(0, 10).join(" ") + "..."}
               </p>
