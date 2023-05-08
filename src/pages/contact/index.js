@@ -108,7 +108,7 @@ function Contact() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="phone-number"
-                  className="block text-sm font-semibold leading-6 text-gray-900 ring-[#05defa] "
+                  className="block text-sm font-semibold leading-6 text-gray-900 ring-[#05defa]"
                 >
                   Phone number
                 </label>

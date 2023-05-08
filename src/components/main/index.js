@@ -4,8 +4,8 @@ import banner from "../../assets/images/banner.jpg"
 function Main() {
   return (
     <article className="w-[100%] h-[50vh] flex mt-20 mb-20">
-      <section className="w-[50%] mr-[9rem]">
-        <h1 className="font-bold text-[50px] capitalize">
+      <section className="w-[50%] mr-[7rem]">
+        <h1 className="font-bold text-[50px] leading-[60px] pb-3 capitalize">
           the best place to find and buy{" "}
           <span className="specialText">products</span>
         </h1>
@@ -16,18 +16,18 @@ function Main() {
         </p>
         <button
           type="button"
-          className="mr-[1rem] text-white capitalize font-medium rounded-[5px] bg-black py-2 px-10"
+          className="mr-[1rem] text-white capitalize font-medium rounded-[5px] bg-black py-1 px-10"
         >
           explore now
         </button>
         <button
           type="button"
-          className="mr-[2rem] capitalize rounded-[5px] box font-medium py-2 px-10"
+          className="mr-[2rem] capitalize rounded-[5px] box font-medium py-1 px-10"
         >
           request a demo
         </button>
       </section>
-      <section className="w-[50%] h-[100%] flex">
+      <section className="w-[60%] h-[100%] flex">
         <img src={banner} alt="banner" className="w-[90%] h-[100%]" />
       </section>
     </article>
