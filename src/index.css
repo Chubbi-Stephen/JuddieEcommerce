@@ -31,10 +31,10 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* .box {
+.box {
   position: relative;
-} */
-/* .box::before {
+}
+.box::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -48,7 +48,7 @@
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-} */
+}
 
 .footer {
   background: linear-gradient(
@@ -57,9 +57,7 @@
     rgb(9, 220, 248) 100.2%
   );
   padding: 1.5rem;
-  /* position: absolute;
-  width: 100%;
-  bottom: 0; */
+  
 }
 
 .foot:hover {

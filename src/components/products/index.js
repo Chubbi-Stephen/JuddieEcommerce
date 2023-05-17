@@ -31,10 +31,10 @@ const Products = () => {
   }
 
   return (
-    <div className="w-[100%] mb-10 showcase grid grid-cols-3 gap-5">
+    <div className="w-[100%] mb-10 showcase grid grid-cols-3 ">
       {items.map((item) => (
-        <section key={item._id} className="w-[100%] box py-6">
-          <div className="w-[80%] m-auto">
+        <section key={item._id} className="w-[100%] py-6">
+          <div className="w-[80%] p-3 shadow-2xl m-auto">
             <img
               src={item.image}
               alt="img_Illustration"
@@ -52,7 +52,10 @@ const Products = () => {
             <p className="text-[13px]">
               {item.description.split(" ").slice(0, 10).join(" ") + "..."}
             </p>
-            <button className="bg mt-4" onClick={() => handleAddToCart(item)}>
+            <button
+              className="bg font-bold shadow-xl mt-4 px-3 rounded"
+              onClick={() => handleAddToCart(item)}
+            >
               Add To Cart
             </button>
           </div>

@@ -10,7 +10,7 @@ const Cart = () => {
           <Navbar />
           <section className="w-full h-[25rem]">
             <div className="center text-[gray]">
-              <h1 className="text-[40px] font-bold">Your Cart is Empty...</h1>
+              <h1 className="text-[40px] font-bold">Your Cart is Empty...🙁</h1>
               <h1 className="text-[26px] text-[#555] font-bold">
                 Please go back to the homepage to shop for an item...
               </h1>
