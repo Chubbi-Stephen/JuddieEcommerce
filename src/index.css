@@ -34,7 +34,7 @@
 .box {
   position: relative;
 }
-.box::before {
+/* .box::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -48,7 +48,7 @@
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-}
+} */
 
 .footer {
   background: linear-gradient(
@@ -59,12 +59,12 @@
   padding: 1.5rem;
 }
 
-.foot:hover{
+.foot:hover {
   color: antiquewhite;
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.2s;
 }
 
-.bg{
+.bg {
   background: linear-gradient(
     68.4deg,
     rgba(99, 251, 215, 1) -0.4%,
@@ -72,13 +72,13 @@
   );
 }
 
-.talk:hover{
+.talk:hover {
   background: linear-gradient(
     68.4deg,
     rgba(99, 251, 215, 1) -0.4%,
     rgba(5, 222, 250, 1) 100.2%
   );
-  color:#fff;
+  color: #fff;
   border: none;
-  transition: all .4s;
+  transition: all 0.4s;
 }

@@ -1,33 +1,33 @@
-import React from "react"
-import { useState, useEffect } from "react"
-import { useDispatch } from "react-redux"
-import { addToCart } from "../features/cartSlice"
+import React from "react";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cartSlice";
 
 const Products = () => {
-  const [items, setItems] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-  const dispatch = useDispatch()
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const dispatch = useDispatch();
 
   function handleAddToCart(item) {
-    dispatch(addToCart(item))
-    console.log("hello world")
+    dispatch(addToCart(item));
+    // console.log("hello world");
   }
 
   useEffect(() => {
     fetch("https://fakestoreapiserver.reactbd.com/products")
       .then((res) => res.json())
       .then((json) => {
-        setItems(json)
-        setIsLoading(false)
-      })
-  }, [])
+        setItems(json);
+        setIsLoading(false);
+      });
+  }, []);
 
   if (isLoading) {
     return (
       <div className="pb-4">
         <h1 className="font-bold text-[30px]">Please wait a minute....</h1>
       </div>
-    )
+    );
   }
 
   return (
@@ -52,19 +52,16 @@ const Products = () => {
             <p className="text-[13px]">
               {item.description.split(" ").slice(0, 10).join(" ") + "..."}
             </p>
-            <button className="bg" onClick={()=>handleAddToCart(item)}>
+            <button className="bg" onClick={() => handleAddToCart(item)}>
               Add To Cart
             </button>
           </div>
         </section>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;
 
-
-// trying to make handleAddToCrt to add to cart on click
-
-
+// trying to make handleAddToCart to add to cart on click
