@@ -40,7 +40,7 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link>Cart</Link>
+          <Link to="/cart">Cart</Link>
         </li>
         <li>
           <Link to="/login" className="text-black active:text-cyan-400">

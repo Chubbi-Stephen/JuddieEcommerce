@@ -31,9 +31,9 @@
   -webkit-text-fill-color: transparent;
 }
 
-.box {
+/* .box {
   position: relative;
-}
+} */
 /* .box::before {
   content: "";
   position: absolute;
@@ -57,6 +57,9 @@
     rgb(9, 220, 248) 100.2%
   );
   padding: 1.5rem;
+  /* position: absolute;
+  width: 100%;
+  bottom: 0; */
 }
 
 .foot:hover {
@@ -81,4 +84,11 @@
   color: #fff;
   border: none;
   transition: all 0.4s;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

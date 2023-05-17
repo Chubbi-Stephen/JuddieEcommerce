@@ -52,7 +52,7 @@ const Products = () => {
             <p className="text-[13px]">
               {item.description.split(" ").slice(0, 10).join(" ") + "..."}
             </p>
-            <button className="bg" onClick={() => handleAddToCart(item)}>
+            <button className="bg mt-4" onClick={() => handleAddToCart(item)}>
               Add To Cart
             </button>
           </div>
