@@ -15,7 +15,6 @@
     rgba(5, 222, 250, 1) 100.2%
   );
   background-size: 100%;
-  /* text-decoration: underline; */
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
