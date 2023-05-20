@@ -38,7 +38,7 @@ const Products = () => {
             <img
               src={item.image}
               alt="img_Illustration"
-              className="w-[100%] h-[200px] object-cover rounded hover:scale-105 transition-all"
+              className="w-[100%] h-[200px] object-cover rounded hover:scale-100 transition-all"
             />
             <span className="flex pt-6">
               <h3 className="w-full capitalize font-bold">{item.title}</h3>
