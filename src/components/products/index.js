@@ -66,5 +66,3 @@ const Products = () => {
 };
 
 export default Products;
-
-// trying to make handleAddToCart to add to cart on click
