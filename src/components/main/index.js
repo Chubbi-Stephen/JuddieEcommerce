@@ -3,8 +3,8 @@ import banner from "../../assets/images/banner.jpg"
 
 function Main() {
   return (
-    <article className="w-[100%] h-[50vh] flex mt-20 mb-20">
-      <section className="w-[50%] mr-[7rem]">
+    <article className="w-[100%] h-[50vh] mt-20 mb-[25rem] md:flex-row">
+      <section className="w-[100%] md:w-[50%] mb-[1.5rem]">
         <h1 className="font-bold text-[50px] leading-[60px] pb-3 capitalize">
           the best place to find and buy{" "}
           <span className="specialText">products</span>
@@ -16,19 +16,23 @@ function Main() {
         </p>
         <button
           type="button"
-          className="mr-[1rem] text-white capitalize font-medium rounded-[5px] bg-black py-1 px-10"
+          className="w-[100%] mr-[1rem] text-white capitalize font-medium rounded-[5px] bg-black mb-3 h-12 py-1 px-10"
         >
           explore now
         </button>
         <button
           type="button"
-          className="mr-[2rem] capitalize rounded-[5px] box font-medium py-1 px-10"
+          className="w-[100%] mr-[2rem] capitalize rounded-[5px] box font-medium py-1 px-10"
         >
           request a demo
         </button>
       </section>
-      <section className="w-[60%] h-[100%] flex">
-        <img src={banner} alt="banner" className="w-[90%] h-[100%]" />
+      <section className="w-[100%] h-[100%] flex md:w-[50%]">
+        <img
+          src={banner}
+          alt="banner"
+          className="w-[100%] h-[90%] md:w-[90%]"
+        />
       </section>
     </article>
   )
