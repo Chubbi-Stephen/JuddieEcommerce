@@ -7,10 +7,10 @@ import { Link } from "react-router-dom"
 function Footer() {
   return (
     <footer className="footer">
-      <section className=" flex justify-around">
+      <section className=" justify-around">
         <div>
           <div>
-            <h3 className="text-[30px] font-semibold">Let's Keep in Touch!</h3>
+            <h3 className="text-[30px] font-bold">Let's Keep in Touch!</h3>
             <p>
               Find us on any of these platforms, we respond 1-2 business days.
             </p>
@@ -19,7 +19,7 @@ function Footer() {
             <span className="foot">
               <FaFacebook size={30} />
             </span>
-            <span className="foot"> 
+            <span className="foot">
               <FaTwitter size={30} />
             </span>
             <span className="foot">
@@ -28,36 +28,41 @@ function Footer() {
           </div>
         </div>
 
-        <div>
-          <h5 className="font-bold uppercase">useful links</h5>
-          <ul>
-            <li className="foot">
-              <Link>About Us</Link>
-            </li>
-            <li className="foot">
-              <Link>Contact Us</Link>
-            </li>
-          </ul>
-        </div>
+        <section className="flex">
+          <div className="pr-8">
+            <h5 className="font-bold uppercase">useful links</h5>
+            <ul>
+              <li className="foot">
+                <Link>About Us</Link>
+              </li>
+              <li className="foot">
+                <Link>Contact Us</Link>
+              </li>
+            </ul>
+          </div>
 
-        <div>
-          <h5 className="font-bold uppercase">other resources</h5>
-          <ul>
-            <li className="foot">
-              <Link>Terms & Conditions</Link>
-            </li>
-            <li className="foot">
-              <Link>Privacy Conditions</Link>
-            </li>
-          </ul>
-        </div>
+          <div>
+            <h5 className="font-bold uppercase">other resources</h5>
+            <ul>
+              <li className="foot">
+                <Link>Terms & Conditions</Link>
+              </li>
+              <li className="foot">
+                <Link>Privacy Conditions</Link>
+              </li>
+            </ul>
+          </div>
+        </section>
       </section>
 
       <hr />
       <section className="w-[100%] p-5 pb-0 flex justify-center">
         <p>
           Copyright © 2023 Chubbi by{" "}
-          <Link className="foot" to="https://devchubbiportfolio.netlify.app/">devChubbi</Link>❤️.
+          <Link className="foot" to="https://devchubbiportfolio.netlify.app/">
+            devChubbi
+          </Link>
+          ❤️.
         </p>
       </section>
     </footer>
