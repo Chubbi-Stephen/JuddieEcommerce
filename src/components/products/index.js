@@ -10,7 +10,6 @@ const Products = () => {
 
   function handleAddToCart(item) {
     dispatch(addToCart(item))
-    // console.log("hello world");
   }
 
   useEffect(() => {
