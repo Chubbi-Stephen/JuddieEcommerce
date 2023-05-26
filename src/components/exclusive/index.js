@@ -3,9 +3,9 @@ import React from "react"
 function Exclusive() {
   return (
     <section className=" w-[100%]">
-      <section className="w-[100%] flex justify-center">
-        <h1 className="font-semibold text-[50px] capitalize">
-          <span className="specialText">exclusive</span> products
+      <section className="w-[100%] flex justify-center ">
+        <h1 className="font-semibold text-[30px] capitalize leading-[3rem]">
+          <span className="specialText ">exclusive</span> products
         </h1>
       </section>
       <div className="w-[100%] flex text-center justify-center">

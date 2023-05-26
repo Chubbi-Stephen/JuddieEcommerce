@@ -16,19 +16,19 @@ function Footer() {
             </p>
           </div>
           <div className="w-[30%] mt-4 mb-6 flex justify-between">
-            <span className="foot">
+            <span className="foot px-3">
               <FaFacebook size={30} />
             </span>
-            <span className="foot">
+            <span className="foot px-3">
               <FaTwitter size={30} />
             </span>
-            <span className="foot">
+            <span className="foot px-3">
               <FaInstagram size={30} />
             </span>
           </div>
         </div>
 
-        <section className="flex">
+        <section className="flex mb-3">
           <div className="pr-8">
             <h5 className="font-bold uppercase">useful links</h5>
             <ul>
