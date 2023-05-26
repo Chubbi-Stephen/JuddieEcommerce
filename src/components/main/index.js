@@ -3,9 +3,9 @@ import banner from "../../assets/images/banner.jpg"
 
 function Main() {
   return (
-    <article className="w-[100%] h-[50vh] mt-10 mb-[33rem] md:flex-row">
+    <article className="w-[100%] h-[50vh] mt-10 mb-[27rem] md:flex-row">
       <section className="w-[100%] md:w-[50%] mb-[1.5rem]">
-        <h1 className="font-bold text-[50px] leading-[60px] pb-3 capitalize">
+        <h1 className="font-bold text-[40px] leading-[50px] pb-3 capitalize">
           the best place to find and buy{" "}
           <span className="specialText">products</span>
         </h1>
@@ -27,11 +27,11 @@ function Main() {
           request a demo
         </button>
       </section>
-      <section className="w-[100%] h-[100%] flex md:w-[50%]">
+      <section className="w-[100%] h-[100%] mb-[2rem] flex md:w-[50%]">
         <img
           src={banner}
           alt="banner"
-          className="w-[100%] h-[90%] md:w-[90%]"
+          className="w-[100%] h-[70%] md:w-[90%]"
         />
       </section>
     </article>
