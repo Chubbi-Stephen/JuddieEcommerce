@@ -3,7 +3,7 @@ import banner from "../../assets/images/banner.jpg"
 
 function Main() {
   return (
-    <article className="w-[100%] h-[50vh] mt-20 mb-[25rem] md:flex-row">
+    <article className="w-[100%] h-[50vh] mt-10 mb-[33rem] md:flex-row">
       <section className="w-[100%] md:w-[50%] mb-[1.5rem]">
         <h1 className="font-bold text-[50px] leading-[60px] pb-3 capitalize">
           the best place to find and buy{" "}

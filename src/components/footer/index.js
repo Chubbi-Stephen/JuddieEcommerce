@@ -56,7 +56,7 @@ function Footer() {
       </section>
 
       <hr />
-      <section className="w-[100%] p-5 pb-0 flex justify-center">
+      <section className="w-[100%] py-2 px-3 pb-0 flex justify-center">
         <p>
           Copyright © 2023 Chubbi by{" "}
           <Link className="foot" to="https://devchubbiportfolio.netlify.app/">

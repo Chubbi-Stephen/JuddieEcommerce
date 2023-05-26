@@ -55,7 +55,9 @@
     rgb(88, 193, 168) -0.4%,
     rgb(9, 220, 248) 100.2%
   );
-  padding: 1.5rem;
+  padding: 1.5rem .3rem;
+  text-align: center;
+
   
 }
 
