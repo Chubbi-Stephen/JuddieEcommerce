@@ -32,9 +32,9 @@ const Login = () => {
 
   return (
     <section>
-      <article className="px-20">
+      <article className="px-3 md:px-20">
         <Navbar />
-        <div className="w-[70%] min-h-screen m-auto bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div className="w-[80%] min-h-screen m-auto bg-gray-50 flex flex-col justify-center sm:px-6 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-md"></div>
           <h1 className="font-medium text-3xl mb-4">
             {isLogin ? "Login" : "Create Account"}
