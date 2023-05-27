@@ -30,10 +30,10 @@ const Products = () => {
   }
 
   return (
-    <div className="w-[100%] mb-10 showcase grid grid-cols-1 gap-4 md:grid-cols-2  lg:grid-cols-3 ">
+    <div className="w-[100%] mb-10 showcase grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 ">
       {items.map((item) => (
         <section key={item._id} className="w-[100%] py-6 ">
-          <div className="w-[100%] p-3 shadow-2xl m-auto rounded md:w-[80%]">
+          <div className="w-[100%] p-3 shadow-2xl m-auto rounded md:w-[95%]">
             <img
               src={item.image}
               alt="img_Illustration"

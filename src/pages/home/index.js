@@ -7,7 +7,7 @@ import Products from "../../components/products"
 function Home() {
   return (
     <article className="px-3">
-      <section className="px-5 md:px-20">
+      <section className="px-5 md:px-10">
         <Navbar />
         <Main />
         <Exclusive />
