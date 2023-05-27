@@ -28,7 +28,7 @@ function Footer() {
           </div>
         </div>
 
-        <section className="flex mb-3">
+        <section className="flex px-4 mb-3">
           <div className="pr-8">
             <h5 className="font-bold uppercase">useful links</h5>
             <ul>

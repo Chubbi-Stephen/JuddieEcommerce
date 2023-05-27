@@ -6,25 +6,25 @@ import Agenda from "../../components/agenda"
 
 function About() {
   return (
-    <article>
-      <section className="px-20">
+    <article className="px-3">
+      <section className="px- md:px-20">
         <Navbar />
         <section className="w-[100%]flex pt-10 flex-col	justify-center text-center">
-          <h1 className="text-[30px] pb-3 font-medium">About Us</h1>
-          <p className="pb-14 text-slate-600">
+          <h1 className="text-[30px] pb-2 font-medium">About Us</h1>
+          <p className="pb-14 text-slate-600 text-[14px]">
             JUDDIE IS… WHERE FUN MEETS FASHION & CLASS AT AFFORDABLE PRICES!
           </p>
         </section>
       </section>
-      <div className="w-[100%] bg-cyan-50 flex mb-20 justify-center items-center">
-        <section className="w-[50%]">
+      <div className="w-[100%] bg-cyan-50 flex flex-col mb-20 justify-center items-center">
+        <section className="w-[90%] mt-4">
           <img src={img} alt="img-illustration" />
         </section>
-        <section className="w-[45%] p-14">
-          <h1 className="text-[40px] font-medium specialText">
+        <section className="w-[88%] p-2">
+          <h1 className="text-[20px] mt-4 mb-2font-semibold specialText">
             OUR LITTLE NICHE
           </h1>
-          <p className="text-slate-600">
+          <p className="text-slate-600 text-[17px]">
             Welcome to Juddie, where fashion meets quality and affordability.
             Our brand was founded in 2020 with the aim of providing our
             customers with the latest fashion trends at accessible prices. We

@@ -43,7 +43,7 @@ const Products = () => {
               <h3 className="w-full capitalize font-bold underline">
                 {item.title}
               </h3>
-              <div className="w-[35%] font-bold text-center rounded-full bg">
+              <div className="w-[38%] h-[1.7rem] font-bold text-center rounded-full bg">
                 <p>${item.price}</p>
               </div>
             </span>
