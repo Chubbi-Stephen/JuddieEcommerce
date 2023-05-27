@@ -15,10 +15,10 @@ function Contact() {
 
   return (
     <article>
-      <section className="px-20">
+      <section className="px-3 md:px-20">
         <Navbar />
 
-        <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="isolate bg-white pt-9 px-6 py-24 sm:py-32 lg:px-8">
           <div
             className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
             aria-hidden="true"
