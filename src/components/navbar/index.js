@@ -15,7 +15,7 @@ function Navbar() {
       <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" class="flex items-center">
-            <img src={Logo} class="h-10 mr-3" alt="Juddie Logo" />
+            <img src={Logo} class="h-14 mr-3" alt="Juddie Logo" />
             <span class="self-center specialText text-3xl font-semibold whitespace-nowrap dark:text-white"></span>
           </Link>
           <button
@@ -45,7 +45,7 @@ function Navbar() {
             class={`w-full md:block md:w-auto ${!showNav ? "hidden" : ""}`}
             id="navbar-default"
           >
-            <ul class="font-medium text-[1.2rem] flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul class="font-medium text-[1.rem] flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <Link
                   to="/"

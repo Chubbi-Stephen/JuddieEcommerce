@@ -3,8 +3,8 @@ import banner from "../../assets/images/banner.jpg"
 
 function Main() {
   return (
-    <article className="w-[100%] h-[50vh] mt-10 mb-[27rem] md:flex-row">
-      <section className="w-[100%] md:w-[50%] mb-[1.5rem]">
+    <article className="w-[100%] flex flex-col h-[50vh] mt-10 mb-[24rem] md:flex-row">
+      <section className="w-[100%] md:w-[50%] md:mr-[5%] mb-[1.5rem]">
         <h1 className="font-bold text-[40px] leading-[50px] pb-3 capitalize">
           the best place to find and buy{" "}
           <span className="specialText">products</span>
@@ -16,7 +16,7 @@ function Main() {
         </p>
         <button
           type="button"
-          className="w-[100%] mr-[1rem] text-white capitalize font-medium rounded-[5px] bg-black mb-3 h-12 py-1 px-10"
+          className="w-[100%] mr-[1rem] text-white capitalize font-medium rounded-[5px] bg-black mb-3 h-12 py-1 px-10 "
         >
           explore now
         </button>
@@ -27,7 +27,7 @@ function Main() {
           request a demo
         </button>
       </section>
-      <section className="w-[100%] h-[100%] mb-[2rem] flex md:w-[50%]">
+      <section className="w-[100%] h-[100%] mb-[2rem] flex md:w-[45%]">
         <img
           src={banner}
           alt="banner"

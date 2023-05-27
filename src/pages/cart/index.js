@@ -8,9 +8,9 @@ const Cart = () => {
       <article>
         <section className="px-3 md:px-20">
           <Navbar />
-          <section className="w-full min-h-[80vh]">
-            <div className="w-[80%] center text-[gray]">
-              <h1 className="text-[40px] font-bold">Your Cart is Empty...🙁</h1>
+          <section className="w-full mt-6 min-h-[100vh]">
+            <div className="w-[100%] text-center text-[gray]">
+              <h1 className="text-[40px] mb-5 font-bold">Your Cart is Empty...🙁</h1>
               <h2 className="text-[26px] text-[#555] font-bold">
                 Please go back to the homepage to shop for an item...
               </h2>

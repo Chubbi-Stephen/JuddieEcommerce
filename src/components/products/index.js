@@ -54,7 +54,7 @@ const Products = () => {
               {item.description.split(" ").slice(0, 10).join(" ") + "..."}
             </p>
             <button
-              className="bg font-bold shadow-xl mt-4 px-3 rounded"
+              className="bg font-bold shadow-2xl mt-4 px-3 rounded"
               onClick={() => handleAddToCart(item)}
             >
               Add To Cart
