@@ -16,12 +16,12 @@ function About() {
           </p>
         </section>
       </section>
-      <div className="w-[100%] bg-cyan-50 flex flex-col mb-20 justify-center items-center">
-        <section className="w-[90%] mt-4">
+      <div className="w-[100%] bg-cyan-50 flex flex-col mb-20 justify-center items-center md:flex-row md:items-center md:justify-center md:h-[300px]">
+        <section className="w-[90%] mt-4 md:w-[40%]">
           <img src={img} alt="img-illustration" />
         </section>
-        <section className="w-[88%] p-2">
-          <h1 className="text-[20px] mt-4 mb-2font-semibold specialText">
+        <section className="w-[88%] p-2 md:w-[50%] md:ml-[2rem] ">
+          <h1 className="text-[20px] mt-4 mb-2font-semibold specialText md:text-[30px] md:font-[700] md:mt-0">
             OUR LITTLE NICHE
           </h1>
           <p className="text-slate-600 text-[17px]">
