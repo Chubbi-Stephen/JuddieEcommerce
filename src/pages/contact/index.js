@@ -15,7 +15,7 @@ function Contact() {
 
   return (
     <article>
-      <section className="px-3 md:px-20">
+      <section className="md:px-20">
         <Navbar />
 
         <div className="isolate bg-white pt-9 px-6 py-24 sm:py-32 lg:px-8">

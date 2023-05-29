@@ -6,7 +6,7 @@ import Agenda from "../../components/agenda"
 
 function About() {
   return (
-    <article className="px-3">
+    <article className="px-">
       <section className="px- md:px-20">
         <Navbar />
         <section className="w-[100%]flex pt-10 flex-col	justify-center text-center">
@@ -24,7 +24,7 @@ function About() {
           <h1 className="text-[20px] mt-4 mb-2font-semibold specialText md:text-[30px] md:font-[700] md:mt-0">
             OUR LITTLE NICHE
           </h1>
-          <p className="text-slate-600 text-[17px]">
+          <p className="text-slate-600 text-[17px] mb-6">
             Welcome to Juddie, where fashion meets quality and affordability.
             Our brand was founded in 2020 with the aim of providing our
             customers with the latest fashion trends at accessible prices. We
