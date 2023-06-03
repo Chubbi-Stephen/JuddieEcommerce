@@ -9,8 +9,10 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
   return (
-    <div className="cart-container">
-      <h2>Shopping Cart</h2>
+    <div className="cart-container w-[100%] py-[2rem] px-[4rem]">
+      <h2 className="w-[50%] font-semibold text-center text-[30px] m-auto">
+        Shopping Cart
+      </h2>
       {cart.cartItems.length === 0 ? (
         <article>
           <section className="px-3 md:px-20">
@@ -36,8 +38,8 @@ const Cart = () => {
         </article>
       ) : (
         <div>
-          <div className="titles">
-            <h3 className="product-title">Product</h3>
+          <div className="titles grid items-center gap-6 grid-cols-5 text-[14px] text-center uppercase mt-[2rem] mb-[1rem]">
+            <h3 className="product-title col-span-2">Product</h3>
             <h3 className="price">Price</h3>
             <h3 className="quantity">Quantity</h3>
             <h3 className="total">Total</h3>
@@ -45,24 +47,44 @@ const Cart = () => {
 
           <section className="cart-items">
             {cart.cartItems?.map((cartItem) => (
-              <div className="cart-item" key={cartItem._id}>
-                <div className="cart-product">
-                  <img src={cartItem.image} alt={cartItem.title} />
-                  {console.log(cartItem.title)}
+              <div
+                className="cart-item border-t-2 py-6 grid items-center gap-2 grid-cols-5"
+                key={cartItem._id}
+              >
+                <div className="cart-product col-span-2 flex pl-2">
+                  <img
+                    src={cartItem.image}
+                    className="pb-3 w-[100px] max-w-[100%] mr-5"
+                    alt={cartItem.title}
+                  />
+
                   <div>
-                    <h3>{cartItem.title}</h3>
-                    <p>{cartItem.description}</p>
-                    <p>{cartItem.category}</p>
-                    <button>Remove</button>
+                    <h3 className="font-bold specialText capitalize">
+                      {cartItem.title}
+                    </h3>
+                    <p className="text-[9px]">
+                      {cartItem.description.split(" ").slice(0, 10).join(" ") +
+                        "..."}
+                    </p>
+                    <p className="pb-6">
+                      {" "}
+                      <strong className="specialText">For: </strong>
+                      {cartItem.category}
+                    </p>
+                    <button className="bg px-2 text-center text-[13px] uppercase font-medium rounded">
+                      Remove
+                    </button>
                   </div>
                 </div>
-                <div className="cart-product-price">{cartItem.price}</div>
-                <div className="cart-product-quantity">
+                <div className="cart-product-price text-center">
+                  {cartItem.price}
+                </div>
+                <div className="cart-product-quantity flex items-center justify-center">
                   <button>-</button>
-                  <div className="count">{cartItem.quantity}</div>
+                  <div className="count">{cartItem.cartQuantity}</div>
                   <button>+</button>
                 </div>
-                <div className="cart-product-total-price">
+                <div className="cart-product-total-price text-center">
                   ${cartItem.price * cartItem.cartQuantity}
                 </div>
               </div>
