@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/JuddieEcommerce/static/css/main.77f879e2.css",
+    "main.js": "/JuddieEcommerce/static/js/main.716f9527.js",
+    "static/media/banner.jpg": "/JuddieEcommerce/static/media/banner.b3c4993116f1e3254f54.jpg",
+    "static/media/select.jpg": "/JuddieEcommerce/static/media/select.ce7eea3ca81e759d9a7c.jpg",
+    "static/media/juddie img.png": "/JuddieEcommerce/static/media/juddie img.489dc82f8ccd2d1b19d8.png",
+    "index.html": "/JuddieEcommerce/index.html",
+    "main.77f879e2.css.map": "/JuddieEcommerce/static/css/main.77f879e2.css.map",
+    "main.716f9527.js.map": "/JuddieEcommerce/static/js/main.716f9527.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77f879e2.css",
+    "static/js/main.716f9527.js"
+  ]
+}
