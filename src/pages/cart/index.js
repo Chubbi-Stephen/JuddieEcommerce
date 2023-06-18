@@ -65,7 +65,7 @@ const Cart = () => {
                     <h3 className="font-bold specialText capitalize">
                       {cartItem.title}
                     </h3>
-                    <p className="text-[9px]">
+                    <p className="text-[12px]">
                       {cartItem.description.split(" ").slice(0, 10).join(" ") +
                         "..."}
                     </p>
