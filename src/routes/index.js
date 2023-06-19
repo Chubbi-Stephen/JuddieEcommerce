@@ -1,7 +1,7 @@
 import React from "react"
 import Home from "../pages/home"
 import "../index.css"
-// import "react-toastify/dist/ReactToastify.css"
+import "react-toastify/dist/ReactToastify.css"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import About from "../pages/about"
 import Contact from "../pages/contact"

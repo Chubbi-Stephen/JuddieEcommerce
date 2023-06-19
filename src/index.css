@@ -6,7 +6,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* overflow: hidden; */
+}
+
+.wallpaper {
+  background-image: url("./assets/images/magicpattern-grid-pattern-1687178548519.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wallpaper1 {
+  background-image: url("./assets/images/magicpattern-grid-pattern-1687177196882.png");
 }
 
 .active {
@@ -56,10 +66,8 @@
     rgb(88, 193, 168) -0.4%,
     rgb(9, 220, 248) 100.2%
   );
-  padding: 1.5rem .3rem;
+  padding: 1.5rem 0.3rem;
   text-align: center;
-
-  
 }
 
 .foot:hover {
@@ -92,3 +100,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* .login {
+  background-image: url("./assets/images/magicpattern-grid-pattern-1687177196882.png");
+} */

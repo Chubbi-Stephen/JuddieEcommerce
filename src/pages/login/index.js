@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Navbar from "../../components/navbar"
 import Footer from "../../components/footer"
+// import logibLogo from "../../assets/images/magicpattern-grid-pattern-1687175985081.png"
 
 const Login = () => {
   const [email, setEmail] = useState("")
@@ -32,9 +33,9 @@ const Login = () => {
 
   return (
     <section>
-      <article className="px-3 md:px-20">
+      <article className="px-3 md:px-20 wallpaper">
         <Navbar />
-        <div className="w-[80%] min-h-screen m-auto bg-gray-50 flex flex-col justify-center sm:px-6 lg:px-8">
+        <div className="w-[80%] min-h-screen m-auto bg-transparent flex flex-col justify-center sm:px-6 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-md"></div>
           <h1 className="font-medium text-3xl mb-4">
             {isLogin ? "Login" : "Create Account"}

@@ -6,7 +6,7 @@ import Agenda from "../../components/agenda"
 
 function About() {
   return (
-    <article className="px-">
+    <article className="px- wallpaper">
       <section className="px- md:px-20">
         <Navbar />
         <section className="w-[100%]flex pt-10 flex-col	justify-center text-center">
