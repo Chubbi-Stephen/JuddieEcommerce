@@ -14,7 +14,6 @@ function Home() {
         <Products />
       </section>
       <Footer />
-      <h1>Hello world</h1>
     </article>
   )
 }

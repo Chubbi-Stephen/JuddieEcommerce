@@ -4,28 +4,33 @@ import Footer from "../../components/footer"
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { HiArrowNarrowLeft } from "react-icons/hi"
+import { useDispatch } from "react-redux"
+import { removeFromCart } from "../../components/features/cartSlice"
 
 const Cart = () => {
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart)
 
+  
+  const handleRemoveFromCart = (cartItem) => {
+    dispatch(removeFromCart(cartItem))
+  }
+
   return (
-    <div className="wallpaper cart-container w-[100%] py-[2rem] px-[4rem]">
+    <div className="wallpaper cart-container w-[100%]  px-[rem]">
       {cart.cartItems.length === 0 ? (
         <article>
-          <section className="px-3 md:px-20">
+          <section className="px-5 md:px-10 lg:px-24">
             <Navbar />
-            <h2 className="w-[50%] font-semibold text-center text-[30px] m-auto">
-              Shopping Cart
-            </h2>
-            <section className="w-full mt-6 min-h-[100vh]">
-              <div className="w-[100%] text-center text-[gray]">
+            <section className="w-full min-h-[100vh]">
+              <div className="w-[100%] text-center mt-4 text-[gray]">
                 <h1 className="text-[40px] mb-5 font-bold">
                   Your Cart is Empty...🙁
                 </h1>
                 <h2 className="text-[26px] text-[#555] font-bold">
                   Please go back to the homepage to shop for an item...
                 </h2>
-                <button className="bg m-auto my-7 font-semibold rounded text-[white] hover:w-[26%] transition-all ease-in-out hover:duration-1000 py-1 px-3">
+                <button className="bg m-auto my-7 font-semibold rounded text-[white] py-1 px-3">
                   <Link to="/" className="flex">
                     <HiArrowNarrowLeft />
                     <span className="px-2">Start Shopping</span>
@@ -38,7 +43,7 @@ const Cart = () => {
         </article>
       ) : (
         <div>
-          <h2 className="w-[50%] font-semibold text-center text-[30px] m-auto">
+          <h2 className="w-[70%] font-semibold text-center text-[30px] m-auto">
             Shopping Cart
           </h2>
           <div className="titles grid items-center font-medium gap-6 grid-cols-5 text-[14px] text-center uppercase mt-[2rem] mb-[1rem]">
@@ -74,7 +79,10 @@ const Cart = () => {
                       <strong className="specialText">For: </strong>
                       {cartItem.category}
                     </p>
-                    <button className="bg px-2 text-center text-[13px] uppercase font-medium rounded">
+                    <button
+                      className="bg px-2 text-center text-[13px] uppercase font-medium rounded"
+                      onClick={() => handleRemoveFromCart(cartItem)}
+                    >
                       Remove
                     </button>
                   </div>
@@ -112,7 +120,10 @@ const Cart = () => {
                 Check out
               </button>
               <button className="w-full text-center bg mt-3 block font-semibold rounded text-[#555] transition-all ease-in-out py-1 px-3">
-                <Link to="/" className="flex w-[90%] justify-center m-auto">
+                <Link
+                  to="/"
+                  className="flex w-[90%] items-center justify-center m-auto"
+                >
                   <HiArrowNarrowLeft />
                   <span className="px-2">Start Shopping</span>
                 </Link>
