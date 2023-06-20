@@ -1,14 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../assets/images/juddie img.png";
-import { useState } from "react";
+import React from "react"
+import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
+import Logo from "../../assets/images/juddie img.png"
+import { useState } from "react"
+import { BsHandbag } from "react-icons/bs"
 
 function Navbar() {
-  const [showNav, setShowNav] = useState(false);
+  const { cartTotalQuantity } = useSelector((state) => state.cart)
+  const [showNav, setShowNav] = useState(false)
 
   const toggleMenu = () => {
-    setShowNav(!showNav);
-  };
+    setShowNav(!showNav)
+  }
 
   return (
     <>
@@ -74,9 +77,10 @@ function Navbar() {
               <li>
                 <Link
                   to="/cart"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  class="flex justify-center items-center font-bold py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
-                  Cart
+                  <BsHandbag />
+                  <span className="ml-1 px-2 rounded-full bg-cyan-300">{cartTotalQuantity}</span>
                 </Link>
               </li>
               <li>
@@ -92,7 +96,7 @@ function Navbar() {
         </div>
       </nav>
     </>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

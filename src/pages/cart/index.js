@@ -1,4 +1,5 @@
 import React from "react"
+import { useEffect } from "react"
 import Navbar from "../../components/navbar"
 import Footer from "../../components/footer"
 import { useSelector } from "react-redux"
@@ -10,11 +11,16 @@ import {
   decreaseCart,
   removeFromCart,
   clearCart,
+  getTotals,
 } from "../../components/features/cartSlice"
 
 const Cart = () => {
-  const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getTotals())
+  }, [cart, dispatch])
 
   const handleRemoveFromCart = (cartItem) => {
     dispatch(removeFromCart(cartItem))
@@ -23,9 +29,11 @@ const Cart = () => {
   const handleDecreaseCart = (cartItem) => {
     dispatch(decreaseCart(cartItem))
   }
+
   const handleIncreaseCart = (cartItem) => {
     dispatch(addToCart(cartItem))
   }
+
   const handleClearCart = () => {
     dispatch(clearCart())
   }
@@ -56,7 +64,8 @@ const Cart = () => {
           <Footer />
         </article>
       ) : (
-        <div>
+        <div className="px-5 md:px-10 lg:px-24">
+          <Navbar />
           <h2 className="w-[70%] font-semibold text-center text-[30px] m-auto">
             Shopping Cart
           </h2>
@@ -131,7 +140,10 @@ const Cart = () => {
           </section>
 
           <div className="cart-summary w-[95%] m-7 flex justify-between">
-            <button className="w-[10%] text-[#333] font-semibold capitalize rounded-[5px] box py-1 h-full" onClick={()=>handleClearCart()}>
+            <button
+              className="w-[10%] text-[#333] font-semibold capitalize rounded-[5px] box py-1 h-full"
+              onClick={() => handleClearCart()}
+            >
               Clear Cart
             </button>
             <div className="cart-checkout m-2 mb-5">
