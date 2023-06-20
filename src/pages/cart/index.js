@@ -5,15 +5,29 @@ import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { HiArrowNarrowLeft } from "react-icons/hi"
 import { useDispatch } from "react-redux"
-import { removeFromCart } from "../../components/features/cartSlice"
+import {
+  addToCart,
+  decreaseCart,
+  removeFromCart,
+  clearCart,
+} from "../../components/features/cartSlice"
 
 const Cart = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart)
 
-  
   const handleRemoveFromCart = (cartItem) => {
     dispatch(removeFromCart(cartItem))
+  }
+
+  const handleDecreaseCart = (cartItem) => {
+    dispatch(decreaseCart(cartItem))
+  }
+  const handleIncreaseCart = (cartItem) => {
+    dispatch(addToCart(cartItem))
+  }
+  const handleClearCart = () => {
+    dispatch(clearCart())
   }
 
   return (
@@ -92,11 +106,21 @@ const Cart = () => {
                 </div>
                 <div className="cart-product-quantity flex items-center justify-center px-2">
                   <div className="border flex rounded bg-[#eee]">
-                    <button className="px-5 py-3 hover:bg-[#ddd]">-</button>
+                    <button
+                      className="px-5 py-3 hover:bg-[#ddd]"
+                      onClick={() => handleDecreaseCart(cartItem)}
+                    >
+                      -
+                    </button>
                     <div className="count px-5 py-3">
                       {cartItem.cartQuantity}
                     </div>
-                    <button className="px-5 py-3 hover:bg-[#ddd]">+</button>
+                    <button
+                      className="px-5 py-3 hover:bg-[#ddd]"
+                      onClick={() => handleIncreaseCart(cartItem)}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
                 <div className="cart-product-total-price font-bold text-center">
@@ -106,17 +130,17 @@ const Cart = () => {
             ))}
           </section>
 
-          <div className="cart-summary w-[100%] m-7 flex justify-between">
-            <button className="clear-cart m-2 h-full bg px-4 font-bold text-[#555] rounded py-1">
+          <div className="cart-summary w-[95%] m-7 flex justify-between">
+            <button className="w-[10%] text-[#333] font-semibold capitalize rounded-[5px] box py-1 h-full" onClick={()=>handleClearCart()}>
               Clear Cart
             </button>
             <div className="cart-checkout m-2 mb-5">
               <div className="subtotal text-[30px] font-bold">
-                <span>Subtotal </span>
+                <span className="font-normal">Sumtotal </span>
                 <span className="amount">${cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculated at checkout</p>
-              <button className="text-white capitalize font-medium rounded bg-black mt-3 py-1 px-10 md:w-[55%] md:h-[25%] md:text-[.7rem]">
+              <button className="text-white capitalize font-medium rounded bg-black mt-3 py-1 px-10 md:w-[100%] md:h-[25%] md:text-[.7rem]">
                 Check out
               </button>
               <button className="w-full text-center bg mt-3 block font-semibold rounded text-[#555] transition-all ease-in-out py-1 px-3">
