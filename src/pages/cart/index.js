@@ -69,7 +69,7 @@ const Cart = () => {
           <h2 className="w-[70%] font-semibold text-center text-[30px] m-auto">
             Shopping Cart
           </h2>
-          <div className="titles grid items-center font-medium gap-6 grid-cols-5 text-[14px] text-center uppercase mt-[2rem] mb-[1rem]">
+          <div className="titles items-center font-medium gap-6 grid-cols-5 text-[14px] text-center uppercase mt-[2rem] mb-[1rem] hidden sm:grid">
             <h3 className="product-title col-span-2">Product</h3>
             <h3 className="price">Price</h3>
             <h3 className="quantity">Quantity</h3>
@@ -139,9 +139,9 @@ const Cart = () => {
             ))}
           </section>
 
-          <div className="cart-summary w-[95%] m-7 flex justify-between">
+          <div className="cart-summary w-[95%] text-center m-auto sm:mt-7 flex flex-col  sm:flex-row sm:justify-between">
             <button
-              className="w-[10%] text-[#333] font-semibold capitalize rounded-[5px] box py-1 h-full"
+              className="w-[20%] ml-2  text-[#333] font-bold capitalize rounded-[5px] box py-1 h-full"
               onClick={() => handleClearCart()}
             >
               Clear Cart
@@ -152,7 +152,7 @@ const Cart = () => {
                 <span className="amount">${cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculated at checkout</p>
-              <button className="text-white capitalize font-medium rounded bg-black mt-3 py-1 px-10 md:w-[100%] md:h-[25%] md:text-[.7rem]">
+              <button className="text-white capitalize font-medium rounded bg-black mt-3 py-1 px-10 w-[100%] md:h-[25%] md:text-[.7rem]">
                 Check out
               </button>
               <button className="w-full text-center bg mt-3 block font-semibold rounded text-[#555] transition-all ease-in-out py-1 px-3">
