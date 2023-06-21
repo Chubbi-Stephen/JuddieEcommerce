@@ -85,7 +85,7 @@ const Cart = () => {
                 <div className="cart-product sm:col-span-2 flex pl-2">
                   <img
                     src={cartItem.image}
-                    className="pb-3 w-[100px] max-w-[100%] mr-5"
+                    className="pb-3 w-[100px] h-[180px] max-w-[100%] mr-5"
                     alt={cartItem.title}
                   />
 
@@ -141,7 +141,7 @@ const Cart = () => {
 
           <div className="cart-summary w-[95%] mb-10 text-center m-auto sm:mt-7 flex flex-col  sm:flex-row sm:justify-between">
             <button
-              className="w-[20%] ml-2  text-[#333] font-bold capitalize rounded-[5px] box py-1 h-full"
+              className="w-[100%] ml-2  text-[#333] font-bold capitalize rounded-[5px] box py-1 h-full"
               onClick={() => handleClearCart()}
             >
               Clear Cart
