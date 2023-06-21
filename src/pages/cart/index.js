@@ -39,7 +39,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="wallpaper cart-container w-[100%]  px-[rem]">
+    <div className="wallpaper cart-container w-[100%] px-[rem]">
       {cart.cartItems.length === 0 ? (
         <article>
           <section className="px-5 md:px-10 lg:px-24">
@@ -66,7 +66,7 @@ const Cart = () => {
       ) : (
         <div className="px-5 md:px-10 lg:px-24">
           <Navbar />
-          <h2 className="w-[70%] font-semibold text-center text-[30px] m-auto">
+          <h2 className="w-[70%] mb-4 font-semibold text-center text-[30px] m-auto">
             Shopping Cart
           </h2>
           <div className="titles items-center font-medium gap-6 grid-cols-5 text-[14px] text-center uppercase mt-[2rem] mb-[1rem] hidden sm:grid">
@@ -76,13 +76,13 @@ const Cart = () => {
             <h3 className="total">Total</h3>
           </div>
 
-          <section className="cart-items">
+          <section className="cart-items w-[100%]">
             {cart.cartItems?.map((cartItem) => (
               <div
-                className="cart-item border-t-2 py-6 grid items-center gap-2 grid-cols-5"
+                className="cart-item w-[100%] border-t-2 py-6 grid items-center gap-2 sm:grid-cols-5"
                 key={cartItem._id}
               >
-                <div className="cart-product col-span-2 flex pl-2">
+                <div className="cart-product sm:col-span-2 flex pl-2">
                   <img
                     src={cartItem.image}
                     className="pb-3 w-[100px] max-w-[100%] mr-5"
@@ -139,7 +139,7 @@ const Cart = () => {
             ))}
           </section>
 
-          <div className="cart-summary w-[95%] text-center m-auto sm:mt-7 flex flex-col  sm:flex-row sm:justify-between">
+          <div className="cart-summary w-[95%] mb-10 text-center m-auto sm:mt-7 flex flex-col  sm:flex-row sm:justify-between">
             <button
               className="w-[20%] ml-2  text-[#333] font-bold capitalize rounded-[5px] box py-1 h-full"
               onClick={() => handleClearCart()}
@@ -161,13 +161,14 @@ const Cart = () => {
                   className="flex w-[90%] items-center justify-center m-auto"
                 >
                   <HiArrowNarrowLeft />
-                  <span className="px-2">Start Shopping</span>
+                  <span className="px-2">Continue Shopping</span>
                 </Link>
               </button>
             </div>
           </div>
         </div>
       )}
+      <Footer />
     </div>
   )
 }
