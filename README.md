@@ -1,4 +1,4 @@
-# portfolio
+# Juddie Ecommerce
 
 > JuddieEcommerce project
 
