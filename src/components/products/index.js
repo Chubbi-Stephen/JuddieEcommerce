@@ -16,7 +16,7 @@ const Products = () => {
   }
 
   useEffect(() => {
-    fetch("https://fakestoreapiserver.reactbd.com/products")
+    fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((json) => {
         setItems(json);
@@ -26,42 +26,38 @@ const Products = () => {
 
   if (isLoading) {
     return (
-      <div className="pb-4">
-        <h1 className="font-bold text-[30px]">Please wait a minute....</h1>
+      <div className="pb-4 flex justify-center items-center min-h-screen">
+        <h1 className="font-bold text-[30px] text-center">Please wait a minute...</h1>
       </div>
     );
   }
 
   return (
-    <div className="w-[100%] mb-10 showcase grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 ">
+    <div className="w-full mb-10 grid grid-cols-1 gap-6 px-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {items.map((item) => (
-        <section key={item._id} className="w-[100%] py-6 ">
-          <div className="w-[100%] p-3 shadow-2xl m-auto rounded md:w-[95%]">
+        <section key={item.id} className="w-full py-6">
+          <div className="w-full p-4 shadow-lg rounded-lg bg-white hover:shadow-xl transition-shadow duration-300">
             <img
               src={item.image}
-              alt="img_Illustration"
-              className="w-[100%] h-[200px] object-cover rounded hover:scale-100 transition-all"
+              alt="Product Illustration"
+              className="w-full h-[200px] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
             />
-            <span className="flex pt-6">
-              <h3 className="w-full capitalize font-bold underline">
-                {item.title}
-              </h3>
-              <div className="w-[38%] text-[#555] h-[1.7rem] font-bold text-center rounded-full bg">
-                <p>${item.price}</p>
+            <div className="pt-4">
+              <h3 className="text-lg font-bold capitalize truncate">{item.title}</h3>
+              <div className="flex justify-between items-center mt-2">
+                <p className="text-gray-600 font-medium">${item.price}</p>
+                <span className="text-sm text-gray-500 capitalize">{item.category}</span>
               </div>
-            </span>
-            <h5 className="pt-4 font-medium pb-3 capitalize">
-              Category: {item.category}
-            </h5>
-            <p className="text-[13px]">
-              {item.description.split(" ").slice(0, 10).join(" ") + "..."}
-            </p>
-            <button
-              className="bg text-[#555] font-bold shadow-2xl mt-4 px-3 rounded"
-              onClick={() => handleAddToCart(item)}
-            >
-              Add To Cart
-            </button>
+              <p className="text-sm text-gray-500 mt-2">
+                {item.description.split(" ").slice(0, 10).join(" ")}...
+              </p>
+              <button
+                className="w-full mt-4 py-2 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition-colors duration-300"
+                onClick={() => handleAddToCart(item)}
+              >
+                Add To Cart
+              </button>
+            </div>
           </div>
         </section>
       ))}
