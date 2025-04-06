@@ -13,6 +13,7 @@ const Products = () => {
   function handleAddToCart(item) {
     dispatch(addToCart(item));
     navigate("/cart");
+    
   }
 
   useEffect(() => {

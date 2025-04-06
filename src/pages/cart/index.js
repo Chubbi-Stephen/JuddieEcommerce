@@ -74,7 +74,7 @@ const Cart = () => {
           <section className="cart-items space-y-6">
             {cart.cartItems.map((cartItem) => (
               <div
-                key={cartItem._id}
+                key={cartItem.id}
                 className="grid grid-cols-1 sm:grid-cols-5 items-center gap-4 border-t py-4"
               >
                 {/* Product Details */}
@@ -167,6 +167,7 @@ const Cart = () => {
       )}
     </div>
   );
+  
 };
 
 export default Cart;
