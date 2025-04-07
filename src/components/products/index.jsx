@@ -11,6 +11,7 @@ const Products = () => {
   const navigate = useNavigate();
 
   function handleAddToCart(item) {
+  
     dispatch(addToCart(item));
     navigate("/cart");
     

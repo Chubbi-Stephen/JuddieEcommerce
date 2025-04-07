@@ -1,6 +1,7 @@
 import React from "react"
 import Home from "../pages/home"
-import "../index.css"
+import "../../src/index.css"
+import 'flowbite';
 import "react-toastify/dist/ReactToastify.css"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import About from "../pages/about"
@@ -11,7 +12,7 @@ import { ToastContainer } from "react-toastify"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_relativeSplatPath: true }}>
       <ToastContainer />
       <Routes>
         <Route index element={<Home />} />

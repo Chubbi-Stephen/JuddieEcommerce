@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./routes"
+import "./index.css"
 
 // preparing the store
 import { configureStore } from "@reduxjs/toolkit"
@@ -15,8 +16,7 @@ export const store = configureStore({
 
 store.dispatch(getTotals())
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(
+const root = ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
