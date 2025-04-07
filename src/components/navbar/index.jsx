@@ -1,108 +1,3 @@
-// import React from "react"
-// import { Link } from "react-router-dom"
-// import { useSelector } from "react-redux"
-// import Logo from "../../assets/images/juddie img.png"
-// import { useState } from "react"
-// import { BsHandbag } from "react-icons/bs"
-
-// function Navbar() {
-//   const { cartTotalQuantity } = useSelector((state) => state.cart)
-//   const [showNav, setShowNav] = useState(false)
-
-//   const toggleMenu = () => {
-//     setShowNav(!showNav)
-//   }
-
-//   return (
-//     <>
-//     <div className="bg-red-500 text-white p-4">Test TailwindCSS</div>
-//       <nav class="bg-transparent border-gray-200 dark:bg-gray-900">
-//         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-//           <Link to="/" class="flex items-center">
-//             <img src={Logo} class="h-14 mr-3" alt="Juddie Logo" />
-//             <span class="self-center specialText text-3xl font-semibold whitespace-nowrap dark:text-white"></span>
-//           </Link>
-//           <button
-//   data-collapse-toggle="navbar-default"
-//   type="button"
-//   onClick={() => toggleMenu()}
-//   class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-//   aria-controls="navbar-default"
-//   aria-expanded="false"
-// >
-//   <span class="sr-only">Open main menu</span>
-//   <svg
-//     className="w-6 h-6"
-//     aria-hidden="true"
-//     fill="currentColor"
-//     viewBox="0 0 20 20"
-//     xmlns="http://www.w3.org/2000/svg"
-//   >
-//     <path
-//       fillRule="evenodd"
-//       clipRule="evenodd"
-//       d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-//     ></path>
-//   </svg>
-// </button>
-//           <div
-//             class={`w-full md:block md:w-auto ${!showNav ? "hidden" : ""}`}
-//             id="navbar-default"
-//           >
-//             <ul class="font-medium text-[1.rem] flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-//               <li>
-//                 <Link
-//                   to="/"
-//                   class="block py-2 pl-3 pr-4 text-white bg-cyan-400 rounded md:bg-transparent md:text-cyan-400 md:p-0 dark:text-white md:dark:text-cyan-400"
-//                   aria-current="page"
-//                 >
-//                   Home
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   to="/about"
-//                   class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-//                 >
-//                   About
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   to="/contact"
-//                   class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-//                 >
-//                   Contact
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   to="/cart"
-//                   class="flex  justify-start items-center font-bold py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-//                 >
-//                   <BsHandbag />
-//                   <span className="ml-1 px-2 text-left rounded-full bg-cyan-300">{cartTotalQuantity}</span>
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   to="/login"
-//                   class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-//                 >
-//                   Login
-//                 </Link>
-//               </li>
-//             </ul>
-//           </div>
-//         </div>
-//       </nav>
-//     </>
-//   )
-// }
-
-// export default Navbar
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -120,19 +15,22 @@ function Navbar() {
 
   return (
     <>
-     <nav className="bg-transparent border-gray-200 ">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="bg-transparent text-black">
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4">
+          {/* Logo Section */}
           <Link to="/" className="flex items-center">
             <img src={Logo} className="h-14 mr-3" alt="Juddie Logo" />
-            <span className="self-center specialText text-3xl font-semibold whitespace-nowrap dark:text-white"></span>
+           
           </Link>
+
+          {/* Mobile Menu Button */}
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            onClick={() => toggleMenu()}
-            className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            onClick={toggleMenu}
+            className="inline-flex items-center p-2 text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-default"
-            aria-expanded="false"
+            aria-expanded={showNav}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -149,15 +47,19 @@ function Navbar() {
               ></path>
             </svg>
           </button>
+
+          {/* Navigation Links */}
           <div
-            className={`w-full md:block md:w-auto ${!showNav ? "hidden" : ""}`}
+            className={`w-full text-black md:block md:w-auto ${
+              showNav ? "block" : "hidden"
+            }`}
             id="navbar-default"
           >
-           <ul class="font-medium text-[1.rem] flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col  md:flex-row md:space-x-8 items-center mt-4 md:mt-0 bg-transparent md:bg-transparent dark:bg-transparent p-4 md:p-0 rounded-lg shadow-none text-black">
               <li>
                 <Link
                   to="/"
-                  className="block py-2 pl-3 pr-4 text-white bg-cyan-400 rounded md:bg-transparent md:text-cyan-400 md:p-0 dark:text-white md:dark:text-cyan-400"
+                  className="block py-2 px-4 hover:text-cyan-500 font-medium rounded md:bg-transparent md:p-0 dark:hover:text-cyan-400"
                   aria-current="page"
                 >
                   Home
@@ -166,7 +68,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/about"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-4 text-gray-800 hover:text-cyan-500 font-medium rounded md:bg-transparent md:p-0 dark:hover:text-cyan-400"
                 >
                   About
                 </Link>
@@ -174,7 +76,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/contact"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-4 text-gray-800 hover:text-cyan-500 font-medium rounded md:bg-transparent md:p-0 dark:hover:text-cyan-400"
                 >
                   Contact
                 </Link>
@@ -182,10 +84,10 @@ function Navbar() {
               <li>
                 <Link
                   to="/cart"
-                  className="flex justify-start items-center font-bold py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="flex items-center py-2 px-4 text-gray-800 hover:text-cyan-500 font-medium rounded md:bg-transparent md:p-0 dark:hover:text-cyan-400"
                 >
-                  <BsHandbag />
-                  <span className="ml-1 px-2 text-left rounded-full bg-cyan-300">
+                  <BsHandbag className="text-xl" />
+                  <span className="ml-2 px-2 py-1 text-sm font-bold text-white bg-cyan-500 rounded-full">
                     {cartTotalQuantity}
                   </span>
                 </Link>
@@ -193,7 +95,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/login"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-4 text-gray-800 hover:text-cyan-500 font-medium rounded md:bg-transparent md:p-0 dark:hover:text-cyan-400"
                 >
                   Login
                 </Link>
