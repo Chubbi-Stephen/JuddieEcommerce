@@ -1,13 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../store/slices/authSlice";
 import Logo from "../../assets/images/juddie img.png";
 import { useState } from "react";
 import { BsHandbag } from "react-icons/bs";
 
 function Navbar() {
   const { cartTotalQuantity } = useSelector((state) => state.cart);
+  const { isAuthenticated } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
   const [showNav, setShowNav] = useState(false);
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
 
   const toggleMenu = () => {
     setShowNav(!showNav);
@@ -93,12 +100,21 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/login"
-                  className="block py-2 px-4 text-gray-800 hover:text-cyan-500 font-medium rounded md:bg-transparent md:p-0 dark:hover:text-cyan-400"
-                >
-                  Login
-                </Link>
+                {isAuthenticated ? (
+                  <button
+                    onClick={handleLogout}
+                    className="block py-2 px-4 shadow-none text-gray-800 hover:text-red-500 font-medium rounded md:bg-transparent md:p-0"
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link
+                    to="/login"
+                    className="block py-2 px-4 text-gray-800 hover:text-cyan-500 font-medium rounded md:bg-transparent md:p-0 dark:hover:text-cyan-400"
+                  >
+                    Login
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

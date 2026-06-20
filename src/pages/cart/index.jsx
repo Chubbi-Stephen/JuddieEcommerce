@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import {
   addToCart,
@@ -10,7 +10,7 @@ import {
   removeFromCart,
   clearCart,
   getTotals,
-} from "../../components/features/cartSlice";
+} from "../../store/slices/cartSlice";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -34,6 +34,17 @@ const Cart = () => {
 
   const handleClearCart = () => {
     dispatch(clearCart());
+  };
+
+  const { isAuthenticated } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    if (isAuthenticated) {
+      navigate("/checkout");
+    } else {
+      navigate("/login");
+    }
   };
 
   return (
@@ -150,7 +161,10 @@ const Cart = () => {
               <p className="text-sm text-gray-600">
                 Taxes and shipping calculated at checkout.
               </p>
-              <button className="mt-4 bg-cyan-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-cyan-600 transition-all">
+              <button 
+                onClick={handleCheckout}
+                className="mt-4 bg-cyan-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-cyan-600 transition-all font-bold"
+              >
                 Proceed to Checkout
               </button>
             </div>

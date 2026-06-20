@@ -1,12 +1,16 @@
 import React, { useState } from "react"
 import Navbar from "../../components/navbar"
 import Footer from "../../components/footer"
-// import logibLogo from "../../assets/images/magicpattern-grid-pattern-1687175985081.png"
+import { useDispatch } from "react-redux"
+import { login } from "../../store/slices/authSlice"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [isLogin, setIsLogin] = useState(true)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
@@ -19,8 +23,9 @@ const Login = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault()
 
-    // Send login/create account data to server here
-    console.log(email, password, isLogin)
+    // Mock login
+    dispatch(login({ email }))
+    navigate("/cart")
 
     // Clear form
     setEmail("")
